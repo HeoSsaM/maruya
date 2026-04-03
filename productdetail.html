@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>마루야 PRODUCT DETAIL</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <link rel="stylesheet" href="css/productdetail.css" />
+    <link rel="stylesheet" href="css/mobile_productdetail.css" media="screen and (max-width: 640px)">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+    <script src="productdetail.js" defer></script>
+</head>
+
+<body>
+    <section id="section01">
+        <nav>
+
+            <div class="nav-L">
+                <a href="index.html" class="logo">
+                    <img src="./img/logo-b.png" alt="home">
+                    <h2>마루야</h2>
+                </a>
+
+                <button class="close-btn">✕</button>
+
+                <ul class="navbar">
+                    <li><a href="brand.html">BRAND</a></li>
+                    <li><a href="product.html">PRODUCT</a></li>
+                    <li><a href="new.html">NEWS</a></li>
+                    <li><a href="event.html">EVENT</a></li>
+                </ul>
+            </div>
+
+            <div class="nav-R">
+                <a href="#">
+                    <img src="img/menu-b.png" class="menu-btn" alt="menu">
+                </a>
+            </div>
+        </nav>
+
+
+    </section>
+
+    <!----------------HEADER 끝 ------------------>
+
+
+    <section id="section02">
+        <div class="fixed-banner">
+            <div class="banner-text">
+                <p class="text">
+                    오늘도 마루야는<br />
+                    정직한 재료와 정성을 담은 요리로<br />
+                    한 끼의 작은 행복을 전합니다.
+                </p>
+            </div>
+        </div>
+    </section>
+
+    <!----------------고정배너 끝 ------------------>
+
+
+
+    <div id="topTabs">
+        <button data-top="all">전체메뉴</button>
+        <button data-top="new">신메뉴</button>
+        <button data-top="season">시즌메뉴</button>
+    </div>
+
+    <div id="bottomTabs">
+        <button data-bottom="noodle">면</button>
+        <button data-bottom="rice">덮밥</button>
+        <button data-bottom="fried">튀김</button>
+        <button data-bottom="side">사이드</button>
+        <button data-bottom="drink">음료</button>
+    </div>
+
+    <!----------------상,하위 탭 끝 ------------------>
+
+
+
+    <section id="detailArea" class="detail-section">
+        <div class="detail-inner">
+
+            <div id="badgeArea" class="badge-area"></div>
+
+            <div class="detail-swiper-wrap">
+                <div class="swiper detailSwiper">
+                    <div class="swiper-wrapper" id="detailSlides"></div>
+                </div>
+                <div class="swiper-pagination"></div>
+            </div>
+
+            <div class="detail-text" id="detailContent"></div>
+
+        </div>
+    </section>
+
+    <!--------------- DETAIL PAGE 끝 ----------------->
+
+
+
+    <footer>
+        <div class="footer-L">
+            <a href="#" class="logo">
+                <img src="./img/logo-W.png" alt="logo">
+                <h2>마루야</h2>
+            </a>
+            <ul class="nav">
+                <li>개인정보처리방침</li>
+                <li>사업자정보확인</li>
+                <li>이메일무단수집거부</li>
+            </ul>
+            <ul class="info">
+                <li>행복희망에이치(마루야 사무소)</li>
+                <li>사업자등록번호 <span>123-45-6789</span></li>
+                <li>대표자 <span>김철수</span></li>
+            </ul>
+            <ul class="address">
+                <li>주소</li>
+                <li><span>서울 강서구 화곡동 1066-20</span></li>
+            </ul>
+            <p>© 2026 Maruya Japanese Dining. All Rights Reserved.</p>
+        </div>
+
+        <div class="footer-R">
+            <div class="num">
+                <p>마루야 고객센터</p>
+                <h3>1670-5259</h3>
+            </div>
+            <ul class="closed">
+                <li>평일(월~금) <span>AM 09:30 ~ PM 17:30</span></li>
+                <li>점심시간 <span>AM 12:30 ~ PM 13:30</span></li>
+                <li>토, 일, 법정공휴일 <span>휴무</span></li>
+            </ul>
+            <p>영업시간</p>
+            <ul class="open">
+                <li>영업(월~토) <span>AM 11:00 ~ PM 22:00</span></li>
+                <li>브레이크타임 <span>AM 15:30 ~ PM 17:00</span></li>
+                <li>일, 법정공휴일 <span>휴무</span></li>
+            </ul>
+        </div>
+    </footer>
+
+
+    <script>
+
+        const menuBtn = document.querySelector('.nav-R a'); 
+        const navbar = document.querySelector('.navbar');
+        const closeBtn = document.querySelector('.close-btn'); 
+
+      
+        menuBtn.addEventListener('click', (e) => {
+            e.preventDefault(); 
+            navbar.classList.add('active');
+            closeBtn.classList.add('active'); 
+        });
+
+
+        closeBtn.addEventListener('click', () => {
+            navbar.classList.remove('active');
+            closeBtn.classList.remove('active'); 
+        });
+    </script>
+
+
+</body>
+
+</html>

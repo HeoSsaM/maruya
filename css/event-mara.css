@@ -1,0 +1,334 @@
+@import url('https://fonts.googleapis.com/css?family=Black+Han+Sans:400');@font-face {
+  font-family: 'GangwonEducationModuche';
+  src: url('https://cdn.jsdelivr.net/gh/projectnoonnu/noonfonts_2201-2@1.0/GangwonEdu_OTFLightA.woff') format('woff');
+  font-weight: 300;
+  font-display: swap;
+}
+
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+ul,
+ol {
+  list-style: none;
+}
+
+a {
+  text-decoration: none;
+  color: inherit;
+}
+
+body {
+  font-family: 'Pretendard', sans-serif;
+  overflow-x: hidden;
+}
+
+.inner {
+  max-width: 1920px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+/*////////// section01 ///////////*/
+
+
+#section01 {
+  position: relative;
+  width: 100%;
+  height: 25vh;
+}
+#section01 .main-text {
+  font-family: 'GangwonEducationModuche';
+  position: absolute;
+  top: 50%;
+  transform: translate(-50%,-50%);
+  left: 50%;
+  color: #000000;
+  z-index: 30;
+  font-size: 44px;
+  text-align: center;
+  font-weight: 800;
+  background: rgba(255, 255, 255, 0.3);
+  padding: 50px;
+}
+
+
+/* 내려오는 배경 */
+.nav-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 0;
+  background: #b88b58;
+  z-index: -1;
+
+  transition: height 0.4s ease;
+}
+
+#section01 nav:hover .nav-bg {
+  height: 230px;
+}
+
+#section01 nav {
+  position: absolute;
+  top: -10px;
+  left: 0;
+  width: 100%;
+  padding: 0 60px;
+ display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 10;
+}
+
+.nav-L {
+  align-items: center;
+  gap: 100px;
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.logo img {
+  width: 250px;
+}
+
+.logo h2 {
+  font-family: 'GangwonEducationModuche';
+  position: absolute;
+  top: 85px;
+  left: 53%;
+  font-size: 24px;
+  color: #000000;
+  margin: 0;
+}
+
+.navbar {
+  display: flex;
+  gap: 70px;
+  left: 0px;
+}
+
+.navbar li a {
+  color: #000000;
+  font-size: 18px;
+  letter-spacing: 1px;
+}
+
+.nav-R img {
+  display: none;
+}
+
+.close-btn {
+  display: none;
+}
+
+
+/*////////// section02 ///////////*/
+
+
+#section02 {
+  width: 100%;
+  height: 400px;
+  background: #4E0000; 
+}
+
+.fixed-banner {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center; 
+  background:  url(../img/fixedbanner.png) no-repeat center ;
+  background-size: 900px;
+}
+
+.banner-text .text {
+  text-align: center;
+  color: #ffffff;
+  font-size: 20px;
+  line-height: 1.7;
+}
+
+
+
+
+
+
+
+/* section03 */
+#section03 {
+  width: 100%;
+  height: 2500px;
+  text-align: center;
+  padding: 0 100px;
+}
+.inner {
+  position: relative;
+  width: 1280px;
+  height: 100%;
+  background: url(../img/EVENT/MARA-bg.png) no-repeat center/cover;
+}
+#section03 .inner .bg-video {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  opacity: 0.25;   /* 영상 진하기 조절 */
+  z-index: 0;
+  pointer-events: none;
+}
+
+#section03 .inner > *:not(.bg-video) {
+  position: relative;
+  z-index: 1;
+}
+.contents {  
+  font-family: 'Black Han Sans', sans-serif;
+  position: absolute;
+  top: 45%;
+  transform: translateY(-50%);
+}
+
+.contents li:nth-child(1) {
+  color: #DFCE18;
+  font-size: 50px;
+  margin-bottom: 10px;
+}
+.contents li:nth-child(2) {
+  margin-bottom: 100px;
+  color: #fff;
+  font-size: 26px;
+}
+.contents li:nth-child(3) video {
+width: 80%;
+ margin-bottom: 50px;
+}
+.contents li:nth-child(4) {
+font-size: 40px;
+color: rgba(255,255,255,0.8);
+}
+.contents li:nth-child(4) span {
+color: #4b0404;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*////////////footer/////////////  */
+
+footer {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding: 40px 60px;
+  background: #2b1d24;
+  color: #d8d0d0;
+  font-size: 12px;
+  line-height: 1.6;
+}
+
+/* 왼쪽 */
+.footer-L {
+  display: flex;
+  flex-direction: column;
+}
+
+.footer-L .logo {
+  display: flex;
+  justify-content: left;
+  align-items: center;
+  gap: 15px;
+  margin-bottom: 20px;
+}
+
+.footer-L .logo img {
+  width: 150px;
+  height: auto;
+}
+
+.footer-L .logo h2 {
+  position: absolute;
+  left: 170px;
+  margin: 0;
+  font-size: 22px;
+  color: #fff;
+  font-weight: 500;
+}
+
+.footer-L .nav {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 15px;
+  font-size: 12px;
+}
+
+.footer-L .info,
+.footer-L .address {
+  display: flex;
+  gap: 15px;
+  flex-wrap: wrap;
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.footer-L span {
+  color: #fff;
+}
+
+.footer-L p {
+  margin-top: 10px;
+  font-size: 11px;
+}
+
+/* 오른쪽 */
+.footer-R {
+  text-align: right;
+}
+
+.footer-R .num {
+  margin-bottom: 20px;
+}
+
+.footer-R .num p {
+  font-size: 12px;
+  margin-bottom: 5px;
+}
+
+.footer-R .num h3 {
+  font-size: 32px;
+  color: #d6a24a;
+  margin: 0;
+}
+
+.footer-R ul {
+  margin-bottom: 15px;
+}
+
+.footer-R li {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  font-size: 12px;
+}
